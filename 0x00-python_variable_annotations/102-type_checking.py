@@ -1,25 +1,21 @@
 #!/usr/bin/env python3
-"""
-Write a type-annotated function `element_length` that takes
-an iterable of sequences and returns a list of tuples.
-Each tuple contains a sequence from the input iterable
-and its corresponding length as an integer.
-"""
-
-from typing import Iterable, Sequence, List, Tuple
+'''Task 12's module.
+'''
+from typing import List, Tuple
 
 
-def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
-    """
-    Returns a list of tuples, where each tuple contains a sequence
-    from the input iterable and its length as an integer.
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    '''Creates multiple copies of items in a tuple.
+    '''
+    zoomed_in: List = [
+        item for item in lst
+        for i in range(int(factor))
+    ]
+    return zoomed_in
 
-    Args:
-        lst (Iterable[Sequence]): An iterable containing sequences,
-                                  such as lists, strings, or tuples.
 
-    Returns:
-        List[Tuple[Sequence, int]]: A list of tuples, where each tuple
-                                    consists of a sequence and its length.
-    """
-    return [(i, len(i)) for i in lst]
+array = (12, 72, 91)
+
+zoom_2x = zoom_array(array)
+
+zoom_3x = zoom_array(array, 3)
