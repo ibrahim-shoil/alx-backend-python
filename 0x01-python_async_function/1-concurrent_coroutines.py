@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-This module contains an asynchronous function to
-run multiple coroutines concurrently
+This module contains an asynchronous
+function to run multiple coroutines concurrently
 and return the delays in ascending order.
 """
 
@@ -12,7 +12,7 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
     """
-    Runs wait_random n times with the specified max_del
+    Runs wait_random n times with the specified max_delay.
     Args:
     n (int): The number of times to call wait_random.
     max_delay (int): The maximum delay for each call to wait_random.
